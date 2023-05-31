@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/avatar"
+        android:transitionName="@string/transition_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivProfilePic"
+        app:layout_constraintRight_toLeftOf="@id/time_container"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:fontFamily="@font/manrope_semibold"
+            android:textColor="@color/grey_10"
+            android:textSize="20sp"
+            tools:text="Prashant S " />
+
+        <TextView
+            android:id="@+id/tvLastMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/manrope_medium"
+            android:maxWidth="150dp"
+            android:maxHeight="22dp"
+            android:textColor="@color/grey_60"
+            android:textSize="14sp"
+            tools:text="Okay, will you join?" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/time_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/not_read_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/not_read_message_background"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center"
+            android:minWidth="25dp"
+            android:minHeight="25dp"
+            tools:text="1"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvMessageTime"/>
+
+
+        <TextView
+            android:id="@+id/tvMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/manrope_regular"
+            android:padding="2dp"
+            android:textColor="@color/grey_60"
+            android:textSize="12sp"
+            tools:text="9:15pm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/vSeparator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey_60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfilePic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

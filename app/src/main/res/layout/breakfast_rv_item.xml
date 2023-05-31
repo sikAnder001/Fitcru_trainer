@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="12dp"
+    android:background="@drawable/background_for_circular_progress">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/item_container_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/main_image_container"
+            style="@style/TrainerImgCustomCardView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/breakfast_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/place_holder" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/breakfast_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/breakfast_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/manrope_semibold"
+                android:text="@string/peanut_butter_toast"
+                android:textColor="@color/grey_5"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/time_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/part_time_icon" />
+
+                <TextView
+                    android:id="@+id/breakfast_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:padding="3dp"
+                    android:text="@string/_5_00_am"
+                    android:textColor="@color/grey_5"
+                    android:textSize="14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/selected_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="19dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/round_background_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_container_main">
+
+        <CheckBox
+            android:id="@+id/selected_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center"
+            android:text="@string/selected"
+            android:textSize="14sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

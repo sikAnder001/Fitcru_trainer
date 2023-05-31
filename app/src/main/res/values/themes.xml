@@ -1,0 +1,173 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FitcruTrainer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/grey_95</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/one</item>
+        <item name="colorSecondaryVariant">@color/one</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+
+        <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="TrainerImgCustomCardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="ModalBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@color/transparent_20</item>
+        <item name="shapeAppearance">@style/RoundedCorner</item>
+    </style>
+
+    <style name="RoundedCorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheet</item>
+    </style>
+
+    <style name="SpinnerTimePickerDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@android:color/darker_gray</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:calendarViewShown">false</item>
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+
+    <style name="custom_tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/grey_10</item>
+    </style>
+
+    <style name="mySpinnerItemStyle1" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/grey_10</item>
+    </style>
+
+    <style name="Theme.FitcruTrainer.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryVariant">@color/grey_95</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="searchableSpinner" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/grey_10</item>
+    </style>
+
+    <style name="MultiSelectSpinner" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/grey_10</item>
+        <item name="background">@color/grey_95</item>
+    </style>
+
+    <style name="AlertDialogStyle1" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/grey_10</item>
+        <item name="android:textColor">@color/grey_10</item>
+        <item name="android:textColorPrimary">@color/grey_10</item>
+        <item name="fontFamily">@font/manrope_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@color/grey_95</item>
+    </style>
+
+    <style name="mySpinnerItemStyle2" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/grey_10</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/color_accent</item>
+        <item name="colorControlHighlight">@color/color_accent</item>
+        <item name="colorControlNormal">@color/color_accent</item>
+
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <item name="android:windowBackground">@color/background_app_color</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="VideoChatTheme" parent="AppTheme.Base">
+        <item name="colorAccent">@color/color_blue_qb</item>
+        <item name="colorControlActivated">@color/color_blue_accent</item>
+        <item name="colorControlHighlight">@color/color_blue_accent</item>
+        <item name="colorControlNormal">@color/color_blue_accent</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowActionBar">false</item>-->
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+
+        <item name="android:windowBackground">@color/background_app_color</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="dialogCornerRadius">16dp</item>
+
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/pro1</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/pro1</item>
+    </style>
+
+    <style name="NeutralButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/pro1</item>
+    </style>
+
+    <style name="mySpinner" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/grey_10</item>
+    </style>
+
+
+</resources>

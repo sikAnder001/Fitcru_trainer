@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/CWorkoutFragment2"
+        android:checked="true"
+        android:icon="@drawable/clients_back"
+        android:menuCategory="secondary"
+        android:title="@string/clients" />
+
+    <item
+        android:id="@+id/TChatFragment"
+        android:icon="@drawable/chat_back"
+        android:menuCategory="secondary"
+        android:title="@string/chat" />
+
+    <!--<item
+        android:id="@+id/TProgramFragment2"
+        android:icon="@drawable/programs_icon"
+        android:menuCategory="secondary"
+        android:title="@string/programs" />-->
+    <item
+        android:id="@+id/TAppointmentFragment"
+        android:icon="@drawable/appointment_back"
+        android:menuCategory="secondary"
+        android:title="@string/appointment" />
+</menu>

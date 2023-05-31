@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentOpponents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_fragment_conversation">
+
+    <com.quickblox.videochat.webrtc.view.QBRTCSurfaceView
+        android:id="@+id/remote_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/grid_opponents" />
+
+    <!--<ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/back_btn_circular_background"
+        android:src="@drawable/back_icon"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <FrameLayout
+        android:id="@+id/container_local_video_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/action_bar_height">
+
+        <com.quickblox.videochat.webrtc.view.QBRTCSurfaceView
+            android:id="@+id/local_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_transparent_50"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:text="@string/you"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            tools:text="name" />
+    </FrameLayout>
+
+    <include layout="@layout/view_outgoing_screen" />
+
+    <TextView
+        android:id="@+id/username_full_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="@dimen/margin_common"
+        android:layout_marginBottom="@dimen/margin_very_small"
+        android:gravity="center_horizontal"
+        android:maxLength="13"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grid_opponents"
+
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        android:layout_above="@+id/element_set_video_buttons"
+        android:layout_marginBottom="@dimen/margin_common"
+        android:horizontalSpacing="@dimen/margin_small"
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/margin_small"
+        tools:listitem="@layout/list_item_opponent_from_call" />
+
+    <include
+        android:id="@+id/element_set_video_buttons"
+        layout="@layout/view_action_buttons_conversation_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/empty_stub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_common" />
+
+    <View
+        android:id="@+id/empty_stub"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        android:orientation="vertical"
+        tools:context=".fragments.ConsultationFormFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:overScrollMode="never">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:id="@+id/item_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tvQ1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/where_are_you_based_out_of_city_and_country"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llQ11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ11"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ11"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ11">
+
+                            <EditText
+                                android:id="@+id/ans1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tvQ2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ12"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/married_or_single"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llQ12"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/edit_profile_edit_text_bg"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ12"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ12"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ12">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/ans2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/grey_10"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:popupBackground="@color/grey_95"
+                                android:theme="@style/mySpinnerItemStyle" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tvQ3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ13"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/what_is_your_daily_routine_like_from_the_time_you_wake_up_till_the_time_you_sleep"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llQ13"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ13"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ13"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ13">
+
+                            <EditText
+                                android:id="@+id/ans3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tvQ4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ14"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/do_you_want_me_to_edit_the_meal_timings_as_you_have_mentioned"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llQ14"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ14"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ14"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ14">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/ans4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:backgroundTint="@color/grey_10"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:popupBackground="@color/grey_95"
+                                android:theme="@style/mySpinnerItemStyle" />
+
+                            <EditText
+                                android:id="@+id/ans4_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tvQ5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ15"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/do_you_take_any_medications_or_supplementations"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ5"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llQ15"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ15"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ15"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ15">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/ans5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:backgroundTint="@color/grey_text"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:popupBackground="@color/grey_95"
+                                android:theme="@style/mySpinnerItemStyle" />
+
+                            <EditText
+                                android:id="@+id/ans5_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/notes_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/notes"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/notes_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/notes_tv"
+                            app:layout_constraintStart_toStartOf="@+id/notes_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/notes_tv">
+
+                            <EditText
+                                android:id="@+id/notes_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/stage_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/stage_of_the_client"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/stage_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/stage_tv"
+                            app:layout_constraintStart_toStartOf="@+id/stage_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/stage_tv">
+
+                            <EditText
+                                android:id="@+id/stage_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/nutrition_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/nutritional_daily_goals"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/nutrition_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/nutrition_tv"
+                            app:layout_constraintStart_toStartOf="@+id/nutrition_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/nutrition_tv">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/calories_tv"
+                                    android:layout_width="65dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Calories Intake"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/edit_profile_edit_text_bg"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/calories_ans"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="3dp"
+
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:inputType="number|numberDecimal"
+                                        android:minHeight="40dp"
+                                        android:paddingHorizontal="20dp"
+                                        android:textColor="@color/grey_10"
+                                        android:textColorHint="@color/grey_10"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="20dp"
+                                        android:text="kcal"
+                                        android:textColor="@color/grey_text"
+                                        android:textSize="18sp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/carbs_tv1"
+                                    android:layout_width="65dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:padding="5dp"
+                                    android:text="@string/carbs"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/edit_profile_edit_text_bg"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/carbs_ans"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:inputType="number|numberDecimal"
+                                        android:minHeight="40dp"
+                                        android:paddingHorizontal="20dp"
+                                        android:textColor="@color/grey_10"
+                                        android:textColorHint="@color/grey_10"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="20dp"
+                                        android:text="%"
+                                        android:textColor="@color/grey_text"
+                                        android:textSize="18sp" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/proteins_tv1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:padding="5dp"
+                                    android:text="@string/proteins"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/edit_profile_edit_text_bg"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/proteins_ans"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:inputType="number|numberDecimal"
+                                        android:minHeight="40dp"
+                                        android:paddingHorizontal="20dp"
+                                        android:textColor="@color/grey_10"
+                                        android:textColorHint="@color/grey_10"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="20dp"
+                                        android:text="%"
+                                        android:textColor="@color/grey_text"
+                                        android:textSize="18sp" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/fats_tv1"
+                                    android:layout_width="65dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:padding="5dp"
+                                    android:text="@string/fats"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/edit_profile_edit_text_bg"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/fats_ans"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:inputType="number|numberDecimal"
+                                        android:minHeight="40dp"
+                                        android:paddingHorizontal="20dp"
+                                        android:textColor="@color/grey_10"
+                                        android:textColorHint="@color/grey_10"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="20dp"
+                                        android:text="%"
+                                        android:textColor="@color/grey_text"
+                                        android:textSize="18sp" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/workout_program_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/workout_program"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/workout_program_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/workout_program_tv"
+                            app:layout_constraintStart_toStartOf="@+id/workout_program_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/workout_program_tv">
+
+                            <EditText
+                                android:id="@+id/workout_program_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:singleLine="true"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/short_goalQ4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/short_goal_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/short_goal_set_time_duration"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/short_goalQ4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/short_goal_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/short_goal_tv"
+                            app:layout_constraintStart_toStartOf="@+id/short_goal_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/short_goal_tv">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/short_goal_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:backgroundTint="@color/grey_text"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:popupBackground="@color/grey_95"
+                                android:theme="@style/mySpinnerItemStyle" />
+
+                            <EditText
+                                android:id="@+id/short_goal_ans_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:hint="Short Goal"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/target_value_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="3dp"
+                                android:text="@string/target_value"
+                                android:textColor="@color/grey_text"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/target_value_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="11dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="number"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/target_date_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="3dp"
+                                android:text="@string/target_date"
+                                android:textColor="@color/grey_text"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/date_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:drawableEnd="@drawable/ic_calendar"
+                                android:drawableTint="@color/grey_10"
+                                android:fontFamily="@font/manrope_medium"
+                                android:gravity="center_vertical"
+                                android:hint="@string/select_date"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/grey_20"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/long_goalQ4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/long_goal_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/long_goal_set_time_duration"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/long_goalQ4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/long_goal_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/long_goal_tv"
+                            app:layout_constraintStart_toStartOf="@+id/long_goal_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/long_goal_tv">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/long_goal_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:backgroundTint="@color/grey_text"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:popupBackground="@color/grey_95"
+                                android:theme="@style/mySpinnerItemStyle" />
+
+                            <EditText
+                                android:id="@+id/long_goal_ans_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:hint="Long Goal"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/target_value_tv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="3dp"
+                                android:text="@string/target_value"
+                                android:textColor="@color/grey_text"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/target_value_et1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="11dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="number"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/target_date_tv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="3dp"
+                                android:text="@string/target_date"
+                                android:textColor="@color/grey_text"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/date_tv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:drawableEnd="@drawable/ic_calendar"
+                                android:drawableTint="@color/grey_10"
+                                android:fontFamily="@font/manrope_medium"
+                                android:gravity="center_vertical"
+                                android:hint="@string/select_date"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/grey_20"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/start_dateQ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/start_date_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/start_date"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/start_dateQ"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/start_date_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/start_date_tv"
+                            app:layout_constraintStart_toStartOf="@+id/start_date_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/start_date_tv">
+
+                            <TextView
+                                android:id="@+id/start_date_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:gravity="fill"
+                                android:hint="@string/start_date"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:singleLine="true"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/water_Q"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/water_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/water"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/water_Q"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/water_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/water_tv"
+                            app:layout_constraintStart_toStartOf="@+id/water_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/water_tv">
+
+                            <EditText
+                                android:id="@+id/water_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/steps_Q"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/steps_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/steps"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/steps_Q"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/steps_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/steps_tv"
+                            app:layout_constraintStart_toStartOf="@+id/steps_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/steps_tv">
+
+                            <EditText
+                                android:id="@+id/step_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/overall_cal_Q"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/overall_cal_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Workout (kcal)"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/overall_cal_Q"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/overall_cal_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/overall_cal_tv"
+                            app:layout_constraintStart_toStartOf="@+id/overall_cal_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/overall_cal_tv">
+
+                            <EditText
+                                android:id="@+id/overall_cal_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/diet_Q"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/diet_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/diet"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/diet_Q"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/diet_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/diet_tv"
+                            app:layout_constraintStart_toStartOf="@+id/diet_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/diet_tv">
+
+                            <EditText
+                                android:id="@+id/diet_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="11dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:hint="@string/_500_kcal"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/carbs_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="3dp"
+                                android:text="@string/carbs"
+                                android:textColor="@color/grey_text"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/carb_gms_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_regular"
+                                android:gravity="end"
+                                android:padding="2dp"
+                                android:textColor="@color/grey_10"
+                                android:textSize="14sp" />
+
+                            <SeekBar
+                                android:id="@+id/carbs_seekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:min="0"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/seekbar_background"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/seekbar_thumb"
+                                android:thumbTint="@color/three" />
+
+                            <TextView
+                                android:id="@+id/proteins_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="3dp"
+                                android:text="@string/proteins"
+                                android:textColor="@color/grey_text"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/proteins_gms_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_regular"
+                                android:gravity="end"
+                                android:padding="2dp"
+                                android:textColor="@color/grey_10"
+                                android:textSize="14sp" />
+
+                            <SeekBar
+                                android:id="@+id/proteins_seekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:min="0"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/seekbar_background"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/seekbar_thumb"
+                                android:thumbTint="@color/three" />
+
+                            <TextView
+                                android:id="@+id/fats_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="3dp"
+                                android:text="@string/fats"
+                                android:textColor="@color/grey_text"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/fats_gms_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_regular"
+                                android:gravity="end"
+                                android:padding="2dp"
+                                android:textColor="@color/grey_10"
+                                android:textSize="14sp" />
+
+                            <SeekBar
+                                android:id="@+id/fats_seekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:min="0"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/seekbar_background"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/seekbar_thumb"
+                                android:thumbTint="@color/three" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20"
+                        android:visibility="gone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/workoutQ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/workout_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="@string/workout"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/workoutQ"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/workout_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/workout_tv"
+                            app:layout_constraintStart_toStartOf="@+id/workout_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/workout_tv">
+
+                            <EditText
+                                android:id="@+id/workout_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="11dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:singleLine="true"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20"
+                        android:visibility="gone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/suggestionQ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/suggestion_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_down"
+                            android:drawableTint="@color/grey_text"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="@string/suggestion"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/suggestionQ"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/suggestion_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/suggestion_tv"
+                            app:layout_constraintStart_toStartOf="@+id/suggestion_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/suggestion_tv">
+
+                            <EditText
+                                android:id="@+id/suggestion_ans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:fontFamily="@font/manrope_medium"
+                                android:hint="@string/suggestion"
+                                android:inputType="textMultiLine"
+                                android:minHeight="60dp"
+                                android:paddingHorizontal="20dp"
+                                android:textColor="@color/grey_10"
+                                android:textColorHint="@color/grey_10"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="15dp"
+                        android:background="@color/grey_20" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/llFooter"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/overlay_light_30" />
+
+            <TextView
+                android:id="@+id/save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/round_background_gradient"
+                android:fontFamily="@font/notosans_bold"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

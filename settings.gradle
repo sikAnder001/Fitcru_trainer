@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"
+        }
+    }
+}
+rootProject.name = "FitcruTrainer"
+include ':app'
+include ':multiselectspinnerlibrary'

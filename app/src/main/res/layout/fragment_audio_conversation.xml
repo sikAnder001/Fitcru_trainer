@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentIncomeCall"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+    <!-- <ImageView
+         android:id="@+id/back_btn"
+         android:layout_width="35dp"
+         android:layout_height="35dp"
+         android:background="@drawable/back_btn_circular_background"
+         android:src="@drawable/back_icon"
+         android:layout_marginStart="18dp"
+         android:layout_marginTop="10dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />-->
+
+    <LinearLayout
+        android:id="@+id/layout_info_about_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/action_bar_height"
+
+        android:gravity="center_horizontal"
+
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/also_in_call_text_left_right_padding"
+        android:paddingRight="@dimen/also_in_call_text_left_right_padding">
+
+
+        <ImageView
+            android:id="@+id/image_caller_avatar"
+            style="@style/CallerAvatar"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_caller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+
+            android:maxLines="1"
+            android:paddingTop="@dimen/padding_top_large"
+            android:textColor="@color/white"
+            android:textSize="@dimen/caller_name_text_size" />
+
+        <TextView
+            android:id="@+id/timer_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_common"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size"
+            android:visibility="invisible"
+            tools:text="08:17"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_also_on_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/also_on_call"
+            android:textColor="@color/white"
+            android:textSize="@dimen/also_on_call_text_size" />
+
+        <TextView
+            android:id="@+id/text_other_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/other_inc_users_text_size"
+            tools:text="@string/user_list_on_call" />
+    </LinearLayout>
+
+    <include layout="@layout/view_outgoing_screen" />
+
+    <include layout="@layout/view_action_buttons_conversation_fragment" />
+</RelativeLayout>

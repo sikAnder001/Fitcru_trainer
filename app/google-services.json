@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "537683156161",
+    "firebase_url": "https://fitcru-1661924107615-default-rtdb.firebaseio.com",
+    "project_id": "fitcru-1661924107615",
+    "storage_bucket": "fitcru-1661924107615.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537683156161:android:28e55e72dd1bc9d02b8840",
+        "android_client_info": {
+          "package_name": "com.ennovations.fitcrucoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537683156161-eutg9sf3fu29i2r874oen0rkjs8gv73b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ennovations.fitcrucoach",
+            "certificate_hash": "36aeb84085b5a1157148118163aa6ef3c6bc064a"
+          }
+        },
+        {
+          "client_id": "537683156161-01ra8euj3nblar76fv9n40cq7ikrjl08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMVZHqg70ZX3-4wiluws2_-Ri4YkHwvDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537683156161-01ra8euj3nblar76fv9n40cq7ikrjl08.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "537683156161-qs9a2sk00h5j537a5dujd10op0qj2vdd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Ennovation.Fitcru"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537683156161:android:35aefb7c7b31c4722b8840",
+        "android_client_info": {
+          "package_name": "com.fitness.fitnessCru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537683156161-au5inldmr4tjp3m867gegb8idsv4pos2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fitness.fitnessCru",
+            "certificate_hash": "36aeb84085b5a1157148118163aa6ef3c6bc064a"
+          }
+        },
+        {
+          "client_id": "537683156161-01ra8euj3nblar76fv9n40cq7ikrjl08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMVZHqg70ZX3-4wiluws2_-Ri4YkHwvDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537683156161-01ra8euj3nblar76fv9n40cq7ikrjl08.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "537683156161-qs9a2sk00h5j537a5dujd10op0qj2vdd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Ennovation.Fitcru"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

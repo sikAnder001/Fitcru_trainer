@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        android:orientation="vertical"
+        tools:context=".fragments.EditGoalsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginVertical="15dp"
+                android:background="@drawable/back_btn_circular_background"
+                android:padding="3dp"
+                android:src="@drawable/back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/notification_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginVertical="15dp"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/save_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_container">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/items_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/edit_goal_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_goals"
+                    android:textColor="@color/grey_10"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/workout_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="Workout (kcal)"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/workout_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="Enter value"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minHeight="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/diet_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/diet"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/diet_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="@string/_500_kcal"
+                    android:minHeight="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_10"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/carbs_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/carbs"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/carb_gms_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_regular"
+                        android:padding="2dp"
+                        android:text="0"
+                        android:textColor="@color/grey_10"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tv"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="%"
+                        android:textColor="@color/grey_10"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <SeekBar
+                    android:id="@+id/carbs_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:min="0"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_background"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:thumbTint="@color/one" />
+
+                <TextView
+                    android:id="@+id/proteins_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/proteins"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/proteins_gms_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_regular"
+                        android:gravity="end"
+                        android:padding="2dp"
+                        android:text="0"
+                        android:textColor="@color/grey_10"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tv1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="%"
+                        android:textColor="@color/grey_10"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <SeekBar
+                    android:id="@+id/proteins_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:min="0"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_background"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:thumbTint="@color/one" />
+
+                <TextView
+                    android:id="@+id/fats_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/fats"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/fats_gms_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_regular"
+                        android:gravity="end"
+                        android:padding="2dp"
+                        android:text="0"
+                        android:textColor="@color/grey_10"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tv2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="%"
+                        android:textColor="@color/grey_10"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <SeekBar
+                    android:id="@+id/fats_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:min="0"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_background"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:thumbTint="@color/one" />
+
+                <TextView
+                    android:id="@+id/overall_cal_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="Calories Intake (kcal)"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/overall_cal_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="Enter value"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minHeight="60dp"
+
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/steps_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/steps"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/steps_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="Enter value"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minHeight="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/water_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/water"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/water_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="Enter value"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minHeight="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/divider_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/grey_60" />
+
+                <TextView
+                    android:id="@+id/short_goal_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/short_goals"
+                    android:textColor="@color/grey_10"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/choose_one_workout_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/choose_any_one_goal"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/short_goal_SP"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/grey_text"
+                        android:popupBackground="@color/grey_95"
+                        android:theme="@style/mySpinnerItemStyle" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/other_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="@string/text_goal"
+                    android:minHeight="60dp"
+
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/target_value_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/target_value"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/target_value_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="Enter value"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minHeight="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/target_date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/target_date"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:drawableTint="@color/grey_10"
+                    android:fontFamily="@font/manrope_medium"
+                    android:gravity="center_vertical"
+                    android:hint="@string/select_date"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey_20"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/grey_60" />
+
+                <TextView
+                    android:id="@+id/long_goal_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/long_goals"
+                    android:textColor="@color/grey_10"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/choose_one_workout_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/choose_any_one_goal"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/long_goal_SP"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/grey_text"
+                        android:popupBackground="@color/grey_95"
+                        android:theme="@style/mySpinnerItemStyle" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/other_et1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="@string/text_goal"
+                    android:minHeight="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_10"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/target_value_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/target_value"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/target_value_et1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="11dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/manrope_medium"
+                    android:hint="Enter value"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minHeight="60dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/target_date_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="3dp"
+                    android:text="@string/target_date"
+                    android:textColor="@color/grey_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/date_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:drawableTint="@color/grey_10"
+                    android:fontFamily="@font/manrope_medium"
+                    android:gravity="center_vertical"
+                    android:hint="@string/select_date"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey_20"
+                    android:textSize="18sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/round_background_gradient"
+            android:fontFamily="@font/notosans_bold"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

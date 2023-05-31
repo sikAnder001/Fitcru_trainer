@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="bottle_green">#006a4e</color>
+    <color name="centre">#B71C1C</color>
+    <color name="chipgray">#d8dce3</color>
+    <color name="colorPrimarys">#3797C1</color>
+    <color name="colorSecondary">#0BC7D8</color>
+    <color name="deep_purple_100">#D1C4E9</color>
+    <color name="deep_purple_200">#B39DDB</color>
+    <color name="deep_purple_300">#9575CD</color>
+    <color name="deep_purple_400">#7E57C2</color>
+    <color name="deep_purple_50">#EDE7F6</color>
+    <color name="deep_purple_500">#673AB7</color>
+    <color name="deep_purple_600">#5E35B1</color>
+    <color name="deep_purple_700">#512DA8</color>
+    <color name="deep_purple_800">#4527A0</color>
+    <color name="deep_purple_900">#311B92</color>
+    <color name="deep_purple_A100">#B388FF</color>
+    <color name="deep_purple_A200">#7C4DFF</color>
+    <color name="deep_purple_A400">#651FFF</color>
+    <color name="deep_purple_A700">#6200EA</color>
+    <color name="defaultBackgroundColor">@android:color/transparent</color>
+    <color name="defaultTextColor">@android:color/black</color>
+    <color name="end">#F9A825</color>
+    <color name="four">#959595</color>
+    <color name="gray">#A4A4A4</color>
+    <color name="green_100">#C8E6C9</color>
+    <color name="green_200">#A5D6A7</color>
+    <color name="green_300">#81C784</color>
+    <color name="green_400">#66BB6A</color>
+    <color name="green_50">#E8F5E9</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="green_600">#43A047</color>
+    <color name="green_700">#388E3C</color>
+    <color name="green_800">#2E7D32</color>
+    <color name="green_900">#1B5E20</color>
+    <color name="green_A100">#B9F6CA</color>
+    <color name="green_A200">#69F0AE</color>
+    <color name="green_A400">#00E676</color>
+    <color name="green_A700">#00C853</color>
+    <color name="greenblue">#00636b</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_100_">#0d0d0d</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_95">#1a1a1a</color>
+    <color name="grey_text">#A4A4A4</color>
+    <color name="light_blue_100">#B3E5FC</color>
+    <color name="light_blue_200">#81D4FA</color>
+    <color name="light_blue_300">#4FC3F7</color>
+    <color name="light_blue_400">#29B6F6</color>
+    <color name="light_blue_50">#E1F5FE</color>
+    <color name="light_blue_500">#03A9F4</color>
+    <color name="light_blue_600">#039BE5</color>
+    <color name="light_blue_700">#0288D1</color>
+    <color name="light_blue_800">#0277BD</color>
+    <color name="light_blue_900">#01579B</color>
+    <color name="light_blue_A100">#80D8FF</color>
+    <color name="light_blue_A200">#40C4FF</color>
+    <color name="light_blue_A400">#00B0FF</color>
+    <color name="light_blue_A700">#0091EA</color>
+    <color name="light_grey">#F5F5F5</color>
+    <color name="most">#27CEA5</color>
+    <color name="nav">#242424</color>
+    <color name="offwhite">#E1E1E1</color>
+    <color name="one">#1EA5AC</color>
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="overlay_dark_30">#4D000000</color>
+    <color name="overlay_dark_40">#66000000</color>
+    <color name="overlay_dark_50">#80000000</color>
+    <color name="overlay_dark_60">#99000000</color>
+    <color name="overlay_dark_70">#B3000000</color>
+    <color name="overlay_dark_80">#CC000000</color>
+    <color name="overlay_dark_90">#E6000000</color>
+    <color name="overlay_light_10">#1AFFFFFF</color>
+    <color name="overlay_light_20">#33FFFFFF</color>
+    <color name="overlay_light_30">#4DFFFFFF</color>
+    <color name="overlay_light_40">#66FFFFFF</color>
+    <color name="overlay_light_50">#8FFFFFF0</color>
+    <color name="overlay_light_60">#99FFFFFF</color>
+    <color name="overlay_light_70">#B3FFFFFF</color>
+    <color name="overlay_light_80">#CCFFFFFF</color>
+    <color name="overlay_light_90">#E6FFFFFF</color>
+    <color name="plan_color_1">#61484A</color>
+    <color name="plan_color_2">#75644A</color>
+    <color name="plan_color_3">#305B5E</color>
+    <color name="pro1">#FC4F60</color>
+    <color name="pro2">#7EE44B</color>
+    <color name="pro3">#06EAFE</color>
+    <color name="pro4">#E4A94B</color>
+    <color name="purple_200">#0d0d0d</color>
+    <color name="purple_500">#33FFFFFF</color>
+    <color name="purple_700">#33FFFFFF</color>
+    <color name="rating_color">#27CEA5</color>
+    <color name="recipe_btn_color">#CDB3B3</color>
+    <color name="red_100">#FFCDD2</color>
+    <color name="red_200">#EF9A9A</color>
+    <color name="red_300">#E57373</color>
+    <color name="red_400">#EF5350</color>
+    <color name="red_50">#FFEBEE</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_600">#E53935</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_800">#C62828</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="red_A100">#FF8A80</color>
+    <color name="red_A200">#FF5252</color>
+    <color name="red_A400">#FF1744</color>
+    <color name="red_A700">#D50000</color>
+    <color name="start">#1B5E20</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="three">#7EE44B</color>
+    <color name="transparent">#0000ffff</color>
+    <color name="transparent_10">#28FFFFFF</color>
+    <color name="transparent_20">#3EFFFFFF</color>
+    <color name="transparent_50">#8FFFFFFF</color>
+    <color name="two">#2DE8A0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white2">#FFFFFFE6</color>
+    <color name="yellow_100">#FFF9C4</color>
+    <color name="yellow_200">#FFF59D</color>
+    <color name="yellow_300">#FFF176</color>
+    <color name="yellow_400">#FFEE58</color>
+    <color name="yellow_50">#FFFDE7</color>
+    <color name="yellow_500">#FFEB3B</color>
+    <color name="yellow_600">#FDD835</color>
+    <color name="yellow_700">#FBC02D</color>
+    <color name="yellow_800">#F9A825</color>
+    <color name="yellow_900">#F57F17</color>
+    <color name="yellow_A100">#FFFF8D</color>
+    <color name="yellow_A200">#FFFF00</color>
+    <color name="yellow_A400">#FFEA00</color>
+    <color name="yellow_A700">#FFD600</color>
+    <string name="_continue">Continue</string>
+    <string name="aliana_d">Aliana D</string>
+    <string name="app_name">Chat</string>
+    <string name="call">Call</string>
+    <string name="chats">Chats</string>
+    <string name="chats_app_will_send_an_sms_message_to_verify_your_phone_number">Fitcru will send an SMS message to verify your phone number.</string>
+    <string name="coming_soon">Coming Soon...</string>
+    <string name="enter_the_otp_code_to_verify_your_phone_number">Enter the OTP code to verify your phone number.</string>
+    <string name="group">Group</string>
+    <string name="invite">Invite</string>
+    <string name="logout">Logout</string>
+    <string name="please_set_your_name_and_profile_image">Please set your name and profile image.</string>
+    <string name="profile">Profile</string>
+    <string name="profile_info">Profile Info</string>
+    <string name="public_group">Public Group</string>
+    <string name="save">Save</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="setup_profile">Setup Profile</string>
+    <string name="status">Status</string>
+    <string name="transition_name">Transition Name</string>
+    <string name="type_a_message">Type a message...</string>
+    <string name="type_your_name">Type your name</string>
+    <string name="type_your_phone_number">Type your phone number</string>
+    <string name="verify_your_phone_number">Verify your phone number</string>
+    <string name="write_message_here">Write Message Here</string>
+    <style name="ImageDialogTheme">
+        <item name="android:windowEnterAnimation">@anim/slide_down_animation</item>
+        <item name="android:windowExitAnimation">@anim/slide_up_animation</item>
+    </style>
+    <style name="TabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="Theme.Chat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey_95</item>
+        <item name="colorPrimaryVariant">@color/grey_95</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/manrope_regular</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+    <style name="Theme.Chat.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green_400</item>
+        <item name="colorPrimaryVariant">@color/green_600</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="WhiteToolbarTheme" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <!-- This attributes is used by navigation icon and overflow icon -->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+    <style name="tab_text2" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

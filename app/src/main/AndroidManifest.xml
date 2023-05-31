@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ennovations.fitcrucoach">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.quickblox.sample.messages.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+
+
+    <application
+        android:name="com.ennovations.fitcrucoach.utility.SessionManager"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitcruTrainer"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/place_holder" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/one" />
+
+
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.OpponentsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.PermissionsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.CallActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.AppInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.ennovations.fitcrucoach.quickbox.services.LoginService" />
+
+        <service
+            android:name="com.ennovations.fitcrucoach.quickbox.services.CallService"
+            android:foregroundServiceType="mediaProjection" />
+
+        <service
+            android:name="com.ennovations.fitcrucoach.quickbox.services.fcm.PushListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.quickblox.messages.services.fcm.QBFcmPushInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.quickblox.messages.TYPE"
+            android:value="GCM" />
+
+        <meta-data
+            android:name="com.quickblox.messages.SENDER_ID"
+            android:value="@string/sender_id" />
+
+        <meta-data
+            android:name="com.quickblox.messages.QB_ENVIRONMENT"
+            android:value="DEVELOPMENT" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="AAAAfTBp3ME:APA91bEXnXMSPB_BhNuEFb3Nzm6rm5wQ0JrYTrBKSmEsZfVb5ylJsKZkKJ3aX01eVlCZ0XPlxG082BprBVhwt-c2cki2Kwf6qx9qNo09FiOombV9iP27sOABqiPQSz8GU47ug35eAMJ3" />
+
+
+        <service
+            android:name="com.ennovations.fitcrucoach.quickbox.util.MyFirebaseMessagingService"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.ViewImageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ennovations.fitcrucoach.activities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

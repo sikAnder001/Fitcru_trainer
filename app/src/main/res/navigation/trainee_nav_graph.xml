@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/trainee_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/planDetailsFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.PlanDetailsFragment"
+        android:label="PlanDetailsFragment"
+        tools:layout="@layout/fragment_plan_details" />
+    <fragment
+        android:id="@+id/TClientsFragment2"
+        android:name="com.ennovations.fitcrucoach.fragments.TClientsFragment"
+        android:label="fragment_t_clients"
+        tools:layout="@layout/fragment_t_clients" />
+    <fragment
+        android:id="@+id/editGoalsFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.EditGoalsFragment"
+        android:label="EditGoalsFragment"
+        tools:layout="@layout/fragment_edit_goals">
+        <action
+            android:id="@+id/action_editGoalsFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+        <action
+            android:id="@+id/action_editGoalsFragment_to_mainPlanFragment"
+            app:destination="@id/mainPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TChatFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.TChatFragment"
+        android:label="TChatFragment"
+        tools:layout="@layout/fragment_t_chat">
+        <action
+            android:id="@+id/action_TChatFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TAppointmentFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.TAppointmentFragment"
+        android:label="TAppointmentFragment"
+        tools:layout="@layout/fragment_t_appointment">
+        <action
+            android:id="@+id/action_TAppointmentFragment_to_scheduleAvailabilityFragment"
+            app:destination="@id/scheduleAvailabilityFragment" />
+        <action
+            android:id="@+id/action_TAppointmentFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleAvailabilityFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.ScheduleAvailabilityFragment"
+        android:label="ScheduleAvailabilityFragment"
+        tools:layout="@layout/fragment_schedule_availability" />
+    <fragment
+        android:id="@+id/myClientFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.MyClientFragment"
+        android:label="fragment_my_client"
+        tools:layout="@layout/fragment_my_client" />
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.MyProfileFragment"
+        android:label="MyProfileFragment"
+        tools:layout="@layout/fragment_my_profile">
+        <action
+            android:id="@+id/action_myProfileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_certificatesFragment"
+            app:destination="@id/certificatesFragment" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_EPLocationFragment"
+            app:destination="@id/EPLocationFragment" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/trainee_nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_myProfileFragment_to_termsAndPrivacyFragment"
+            app:destination="@id/termsAndPrivacyFragment"
+            app:popUpTo="@id/myProfileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCertificateFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.AddCertificateFragment"
+        android:label="fragment_add_certificate"
+        tools:layout="@layout/fragment_add_certificate">
+        <action
+            android:id="@+id/action_addCertificateFragment_to_certificatesFragment"
+            app:destination="@id/certificatesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/certificatesFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.CertificatesFragment"
+        android:label="fragment_certificates"
+        tools:layout="@layout/fragment_certificates">
+        <action
+            android:id="@+id/action_certificatesFragment_to_addCertificateFragment"
+            app:destination="@id/addCertificateFragment" />
+        <action
+            android:id="@+id/action_certificatesFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_CWorkoutFragment2"
+            app:destination="@id/CWorkoutFragment2"
+            app:popUpTo="@id/loginFragment"
+
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_termsAndPrivacyFragment"
+            app:destination="@id/termsAndPrivacyFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_OTPVerificationFragment"
+            app:destination="@id/OTPVerificationFragment"
+            app:popUpTo="@id/forgotPasswordFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/forgotPasswordFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/EPLocationFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.EPLocationFragment"
+        android:label="EPLocationFragment"
+        tools:layout="@layout/fragment_e_p_location" />
+    <fragment
+        android:id="@+id/mainPlanFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.MainPlanFragment"
+        android:label="MainPlanFragment"
+        tools:layout="@layout/fragment_main_plan">
+        <action
+            android:id="@+id/action_mainPlanFragment_to_editGoalsFragment"
+            app:destination="@id/editGoalsFragment" />
+        <action
+            android:id="@+id/action_mainPlanFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+        <action
+            android:id="@+id/action_mainPlanFragment_to_foodListingFragment"
+            app:destination="@id/foodListingFragment" />
+        <action
+            android:id="@+id/action_mainPlanFragment_to_CWorkoutFragment2"
+            app:destination="@id/CWorkoutFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/consultationFormFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.ConsultationFormFragment"
+        android:label="ConsultationFormFragment"
+        tools:layout="@layout/fragment_consultation_form" />
+    <fragment
+        android:id="@+id/CWorkoutFragment2"
+        android:name="com.ennovations.fitcrucoach.fragments.CWorkoutFragment"
+        android:label="CWorkoutFragment"
+        tools:layout="@layout/fragment_c_workout">
+        <action
+            android:id="@+id/action_CWorkoutFragment2_to_mainPlanFragment"
+            app:destination="@id/mainPlanFragment" />
+        <action
+            android:id="@+id/action_CWorkoutFragment2_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+        <action
+            android:id="@+id/action_CWorkoutFragment2_to_loginFragment3"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_CWorkoutFragment2_to_notificationList"
+            app:destination="@id/notificationList" />
+
+        <action
+            android:id="@+id/action_editGoalsFragment_to_planDetailsFragment"
+            app:destination="@id/planDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPVerificationFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.OTPVerificationFragment"
+        android:label="OTPVerificationFragment"
+        tools:layout="@layout/fragment_o_t_p_verification">
+        <action
+            android:id="@+id/action_OTPVerificationFragment_to_createPasswordFragment"
+            app:destination="@id/createPasswordFragment"
+            app:popUpTo="@id/OTPVerificationFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_OTPVerificationFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:popUpTo="@id/OTPVerificationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPasswordFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.CreatePasswordFragment"
+        android:label="CreatePasswordFragment"
+        tools:layout="@layout/fragment_create_password">
+        <action
+            android:id="@+id/action_createPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/createPasswordFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_createPasswordFragment_to_OTPVerificationFragment"
+            app:destination="@id/OTPVerificationFragment"
+            app:popUpTo="@+id/createPasswordFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsAndPrivacyFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.TermsAndPrivacyFragment"
+        android:label="TermsAndPrivacyFragment"
+        tools:layout="@layout/fragment_terms_and_privacy">
+        <action
+            android:id="@+id/action_termsAndPrivacyFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment"
+            app:popUpTo="@+id/termsAndPrivacyFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_termsAndPrivacyFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/termsAndPrivacyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListingFragment"
+        android:name="com.ennovations.fitcrucoach.fragments.FoodListingFragment"
+        android:label="fragment_food_listingfragment"
+        tools:layout="@layout/fragment_food_listingfragment" />
+    <fragment
+        android:id="@+id/notificationList"
+        android:name="com.ennovations.fitcrucoach.fragments.NotificationList"
+        android:label="fragment_notification_list"
+        tools:layout="@layout/fragment_notification_list" />
+
+
+</navigation>

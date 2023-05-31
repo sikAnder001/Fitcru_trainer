@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="45dp"
+    android:layout_marginTop="5dp">
+
+    <LinearLayout
+        android:id="@+id/llItemSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/sent_drawable"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivSent"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:transitionName="transition_name"
+            android:visibility="gone"
+            app:srcCompat="@drawable/place_holder" />
+
+        <TextView
+            android:id="@+id/tvSentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="TextView" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="5dp">
+
+            <TextView
+                android:id="@+id/tvSentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 PM"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/check"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/sign"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

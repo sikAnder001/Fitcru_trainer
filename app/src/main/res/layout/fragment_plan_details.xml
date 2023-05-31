@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        tools:context=".fragments.PlanDetailsFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_for_my_profile_second"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/coach_profile_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/user_image"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/place_holder"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/meal_type_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="16dp"
+                                android:gravity="center"
+                                android:minHeight="60dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/user_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_semibold"
+                                    android:text=""
+                                    android:textColor="@color/grey_10"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:id="@+id/arrowDown"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_arrow_down" />
+
+                                <ImageView
+                                    android:id="@+id/arrowUp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_arrow_up"
+                                    android:visibility="gone" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <LinearLayout
+                            android:id="@+id/userdetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!-- <ProgressBar
+                                 android:id="@+id/progreBarHorizontal"
+                                 style="?android:attr/progressBarStyleHorizontal"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="10dp"
+                                 android:layout_marginVertical="10dp"
+                                 android:progress="00"
+                                 android:progressDrawable="@drawable/progress_back" />
+
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginVertical="10dp">
+
+                                 <TextView
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_gravity="left"
+                                     android:layout_weight="2"
+                                     android:fontFamily="@font/manrope_regular"
+                                     android:text="@string/goal"
+                                     android:textColor="@color/white"
+                                     android:textSize="16sp" />
+
+                                 <TextView
+                                     android:id="@+id/goalLeft"
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_weight="2"
+                                     android:fontFamily="@font/manrope_semibold"
+                                     android:gravity="right"
+                                     android:text=""
+                                     android:textColor="@color/gray"
+                                     android:textSize="16sp" />
+                             </LinearLayout>-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="@string/short_goals1"
+                                    android:textColor="@color/gray"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/short_goal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/manrope_semibold"
+                                    android:gravity="right"
+                                    android:text=""
+                                    android:textColor="@color/whiteoff"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/transparent_20" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="@string/target_value"
+                                    android:textColor="@color/gray"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/targetValue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/manrope_semibold"
+                                    android:gravity="right"
+                                    android:text=""
+                                    android:textColor="@color/whiteoff"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/transparent_20" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="@string/target_date"
+                                    android:textColor="@color/gray"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/target_date"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/manrope_semibold"
+                                    android:gravity="right"
+                                    android:text=""
+                                    android:textColor="@color/whiteoff"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/edit_goalLl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/round_background_white"
+                                android:gravity="center"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/pen_icon"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    app:tint="@color/one" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/manrope_semibold"
+                                    android:gravity="right"
+                                    android:text="@string/edit"
+                                    android:textColor="@color/most"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/circular_progress_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/background_for_circular_progress"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginVertical="20dp"
+                            android:layout_weight="1.2"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <!--<LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.2"
+                                >-->
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_weight="1.2"
+                                android:gravity="center_vertical">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/progress1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="150dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.mikhaellopez.circularprogressbar.CircularProgressBar>
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/progress2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="118dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.mikhaellopez.circularprogressbar.CircularProgressBar>
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/progress3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="86dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.mikhaellopez.circularprogressbar.CircularProgressBar>
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/progress4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="54dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.mikhaellopez.circularprogressbar.CircularProgressBar>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+
+                                android:layout_marginEnd="15dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/pro1" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:fontFamily="@font/manrope_semibold"
+                                            android:text="@string/workout"
+                                            android:textColor="@color/white"
+                                            android:textSize="13sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/workoutTV2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="5dp"
+                                                android:fontFamily="@font/manrope_semibold"
+                                                android:text="80% 300"
+                                                android:textColor="@color/white"
+                                                android:textSize="11sp" />
+
+                                            <TextView
+                                                android:id="@+id/tvWorkoutUnit2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="3dp"
+                                                android:fontFamily="@font/manrope_regular"
+                                                android:text="Kcal burnt"
+                                                android:textColor="@color/offwhite"
+                                                android:textSize="9sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/pro2" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:fontFamily="@font/manrope_semibold"
+                                            android:text="@string/diet"
+                                            android:textColor="@color/white"
+                                            android:textSize="13sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/dietTV"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="5dp"
+                                                android:fontFamily="@font/manrope_semibold"
+                                                android:text="@string/_1000_2500"
+                                                android:textColor="@color/white"
+                                                android:textSize="11sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="3dp"
+                                                android:fontFamily="@font/manrope_regular"
+                                                android:text="kcal Consumed"
+                                                android:textColor="@color/offwhite"
+                                                android:textSize="9sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/pro3" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:fontFamily="@font/manrope_semibold"
+                                            android:text="@string/water"
+                                            android:textColor="@color/white"
+                                            android:textSize="13sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/waterTV"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="5dp"
+                                                android:fontFamily="@font/manrope_semibold"
+                                                android:text="@string/_3_5"
+                                                android:textColor="@color/white"
+                                                android:textSize="11sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="3dp"
+                                                android:fontFamily="@font/manrope_regular"
+                                                android:text="@string/liters"
+                                                android:textColor="@color/offwhite"
+                                                android:textSize="9sp"
+                                                tools:ignore="SmallSp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/pro4"
+
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:fontFamily="@font/manrope_semibold"
+                                            android:text="@string/steps"
+                                            android:textColor="@color/white"
+                                            android:textSize="13sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/stepsTV"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="5dp"
+                                                android:fontFamily="@font/manrope_semibold"
+                                                android:text="@string/_2000_10000"
+                                                android:textColor="@color/white"
+                                                android:textSize="11sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="3dp"
+                                                android:fontFamily="@font/manrope_regular"
+                                                android:text="@string/steps"
+                                                android:textColor="@color/offwhite"
+                                                android:textSize="9sp"
+                                                tools:ignore="SmallSp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/plan_details_calendar_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:overScrollMode="never"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="@string/nutrition"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/nutrition_toast_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_for_certificate"
+                        android:gravity="center"
+                        android:text="No Meals yet!"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/nutritionRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/plan_detailed_workout_child_rv_items" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="@string/workout"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/workout_toast_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_for_certificate"
+                        android:gravity="center"
+                        android:text="No Workouts Yet"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/workoutRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/plan_detailed_workout_child_rv_items" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="@string/habit"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/habit_toast_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_for_certificate"
+                        android:gravity="center"
+                        android:text="No Habits"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/habitRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/habit_rv_item" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

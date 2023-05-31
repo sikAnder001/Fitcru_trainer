@@ -1,0 +1,112 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.developer.test.chat" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="31" />
+7-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.INTERNET" />
+9-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:5:5-67
+9-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:5:22-64
+10    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+10-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:6:5-79
+10-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:6:22-76
+11    <uses-permission
+11-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:7:5-9:38
+12        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+12-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:8:9-65
+13        android:maxSdkVersion="28" />
+13-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:9:9-35
+14
+15    <application
+15-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:11:5-54:19
+16        android:label="@string/app_name"
+16-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:12:9-41
+17        android:supportsRtl="true"
+17-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:13:9-35
+18        android:usesCleartextTraffic="true" >
+18-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:14:9-44
+19        <activity
+19-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:15:9-18:52
+20            android:name="com.developer.test.chat.ui.activities.view_image.ViewImageActivity"
+20-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:16:13-94
+21            android:exported="true"
+21-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:17:13-36
+22            android:screenOrientation="portrait" />
+22-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:18:13-49
+23        <activity
+23-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:19:9-22:52
+24            android:name="com.developer.test.chat.ui.activities.group_chat.GroupChatActivity"
+24-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:20:13-94
+25            android:exported="false"
+25-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:21:13-37
+26            android:screenOrientation="portrait" />
+26-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:22:13-49
+27        <activity
+27-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:23:9-26:52
+28            android:name="com.developer.test.chat.ui.activities.chat.ChatActivity"
+28-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:24:13-83
+29            android:exported="false"
+29-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:25:13-37
+30            android:screenOrientation="portrait" />
+30-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:26:13-49
+31        <activity
+31-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:27:9-30:52
+32            android:name="com.developer.test.chat.ui.activities.setup_profile.SetupProfileActivity"
+32-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:28:13-100
+33            android:exported="false"
+33-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:29:13-37
+34            android:screenOrientation="portrait" />
+34-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:30:13-49
+35        <activity
+35-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:31:9-35:63
+36            android:name="com.developer.test.chat.ui.activities.home.HomeActivity"
+36-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:32:13-83
+37            android:exported="false"
+37-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:33:13-37
+38            android:screenOrientation="portrait"
+38-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:34:13-49
+39            android:theme="@style/Theme.Chat"
+39-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:31:19-52
+40            android:windowSoftInputMode="stateAlwaysHidden" />
+40-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:35:13-60
+41        <activity
+41-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:36:9-40:58
+42            android:name="com.developer.test.chat.ui.activities.phone_number.PhoneNumberActivity"
+42-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:37:13-98
+43            android:exported="true"
+43-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:38:13-36
+44            android:screenOrientation="portrait"
+44-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:39:13-49
+45            android:windowSoftInputMode="stateVisible" />
+45-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:40:13-55
+46        <activity
+46-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:41:9-45:58
+47            android:name="com.developer.test.chat.ui.activities.otp.OtpActivity"
+47-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:42:13-81
+48            android:exported="false"
+48-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:43:13-37
+49            android:screenOrientation="portrait"
+49-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:44:13-49
+50            android:windowSoftInputMode="stateVisible" />
+50-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:45:13-55
+51
+52        <service
+52-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:47:9-53:19
+53            android:name="com.developer.test.chat.fcm.MyFirebaseMessagingService"
+53-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:48:13-82
+54            android:exported="false" >
+54-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:49:13-37
+55            <intent-filter>
+55-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:50:13-52:29
+56                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+56-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:51:17-78
+56-->D:\AApps\1\project\AAATrainerFitcruNEW\TRAINER_FITCRU\chat\src\main\AndroidManifest.xml:51:25-75
+57            </intent-filter>
+58        </service>
+59    </application>
+60
+61</manifest>

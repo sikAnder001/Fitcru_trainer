@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        tools:context=".fragments.EPBasicFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/setIMG"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/place_holder" />
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/img_btn_container"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="120dp"
+                            android:layout_marginTop="120dp"
+                            app:cardCornerRadius="30dp"
+                            app:layout_constraintBottom_toBottomOf="@id/constraint"
+                            app:layout_constraintLeft_toLeftOf="@id/constraint"
+                            app:layout_constraintRight_toRightOf="@id/constraint"
+                            app:layout_constraintTop_toTopOf="@id/constraint">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/image_pick_btn"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/pen_icon"
+                                app:tint="@color/one" />
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/first_name1"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/unameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:fontFamily="@font/manrope_medium"
+                        android:hint="@string/enter_name"
+                        android:inputType="textMultiLine"
+                        android:minHeight="60dp"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/grey_10"
+                        android:textColorHint="@color/grey_10"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/mobile"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/manrope_medium"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:text="@string/_91"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="15dp"
+                            android:background="@color/grey_text" />
+
+                        <EditText
+                            android:id="@+id/mobileET"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@null"
+                            android:fontFamily="@font/manrope_medium"
+                            android:hint="@string/enter_mobile_number"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:textColor="@color/grey_10"
+                            android:textColorHint="@color/grey_10"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/email"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/emailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/manrope_medium"
+                        android:hint="@string/enter_email_id_1"
+                        android:inputType="textMultiLine|textEmailAddress"
+                        android:minHeight="60dp"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/grey_10"
+                        android:textColorHint="@color/grey_10"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/gender"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/genderPick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/grey_text"
+                            android:entries="@array/gender"
+                            android:popupBackground="@color/grey_95"
+                            android:theme="@style/mySpinnerItemStyle" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/date_of_birth"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/select_dob"
+                        android:textColor="@color/grey_10"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/biodata"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/bio_dataET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:fontFamily="@font/manrope_medium"
+                        android:hint="@string/bio_data"
+                        android:inputType="textMultiLine|text"
+                        android:minHeight="60dp"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/grey_10"
+                        android:textColorHint="@color/grey_10"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/save_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/round_background_gradient"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

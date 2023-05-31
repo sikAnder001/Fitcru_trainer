@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottomsheet_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/meal_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_semibold"
+                android:padding="5dp"
+                android:text="@string/add_appointment"
+                android:textColor="@color/grey_10"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cross_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_40"
+                android:src="@drawable/cross_icon_for_bottom_sheet"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="8dp"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_cons">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/items_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/add_date_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/add_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/add_date"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/date_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:drawableEnd="@drawable/cal_icone"
+                        android:drawableTint="@color/grey_10"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center_vertical"
+                        android:hint="@string/select_date"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/grey_20"
+                        android:textSize="18sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/add_name_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_date_container">
+
+                    <TextView
+                        android:id="@+id/add_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="Name of Client"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/add_name_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:backgroundTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_medium"
+                        android:maxHeight="60dp"
+                        android:minHeight="60dp"
+                        android:padding="8dp"
+                        android:theme="@style/mySpinnerItemStyle2" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/add_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/add_name_container">
+
+                    <TextView
+                        android:id="@+id/add_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="Select time for appointment"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <!--<com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/add_time_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="8dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:backgroundTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_medium"
+                        android:maxHeight="60dp"
+                        android:minHeight="60dp"
+                        android:padding="8dp" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/add_time_spinner"
+                            android:layout_width="350dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/time_spinner"
+                            android:layout_width="25dp"
+
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="20dp"
+
+                            android:src="@drawable/part_time_icon" />
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/add_note_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/add_time_container">
+
+                    <TextView
+                        android:id="@+id/add_note_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/add_note"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/note_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_bg"
+                        android:fontFamily="@font/manrope_medium"
+                        android:hint="@string/enter_your_note"
+                        android:inputType="textMultiLine"
+                        android:minHeight="60dp"
+                        android:paddingHorizontal="20dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/grey_20"
+                        android:textSize="18sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_background_gradient"
+            android:fontFamily="@font/notosans_bold"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scroll_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

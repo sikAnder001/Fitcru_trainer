@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        tools:context=".fragments.MyProfileFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginVertical="15dp"
+                android:background="@drawable/back_btn_circular_background"
+                android:padding="3dp"
+                android:src="@drawable/back_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/notification_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginVertical="15dp"
+                android:fontFamily="@font/manrope_semibold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_container">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/profile_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/main_image_container"
+                        style="@style/TrainerImgCustomCardView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/person_image"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/place_holder" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/person_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/notosans_semibold"
+                        android:padding="5dp"
+                        android:text="@string/name"
+                        android:textColor="@color/grey_10"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/my_certifications_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_for_my_profile_second"
+                    android:minHeight="66dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/background_for_my_profile"
+                        android:padding="8dp"
+                        android:src="@drawable/certifications_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/my_certifications"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/location_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_for_my_profile_second"
+                    android:minHeight="66dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/background_for_my_profile"
+                        android:padding="5dp"
+                        android:src="@drawable/back_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/location"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/help_support_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_for_my_profile_second"
+                    android:minHeight="66dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/background_for_my_profile"
+                        android:padding="8dp"
+                        android:src="@drawable/help_icons" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="Help Support"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/terms_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_for_my_profile_second"
+                    android:minHeight="66dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/background_for_my_profile"
+                        android:padding="8dp"
+                        android:src="@drawable/terms_icons2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/terms_amp_conditions"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/privacy_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_for_my_profile_second"
+                    android:minHeight="66dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/background_for_my_profile"
+                        android:padding="8dp"
+                        android:src="@drawable/lock_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/privacy_policy"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/deactivate_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_for_my_profile_second"
+                    android:gravity="center"
+                    android:minHeight="66dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/background_for_my_profile"
+                        android:padding="8dp"
+                        android:src="@drawable/deactivate_acc_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/deactivate"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/logout_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@drawable/background_for_my_profile_second"
+                    android:gravity="center"
+                    android:minHeight="66dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/background_for_my_profile"
+                        android:padding="8dp"
+                        android:src="@drawable/logout" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/logout"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/right_icon" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

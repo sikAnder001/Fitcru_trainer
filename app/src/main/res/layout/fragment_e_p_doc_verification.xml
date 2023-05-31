@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        tools:context=".fragments.EPDocVerificationFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/aadhar_card_passport_no"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/cardsEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:fontFamily="@font/manrope_medium"
+                        android:hint="@string/enter_aadhar_card_passport_no"
+
+                        android:minHeight="60dp"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/grey_10"
+                        android:textColorHint="@color/grey_10"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="@string/coach_instagram_link"
+                        android:textColor="@color/grey_text"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/linkET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/edit_profile_edit_text_bg"
+                        android:fontFamily="@font/manrope_medium"
+                        android:hint="@string/link"
+                        android:inputType="textMultiLine"
+                        android:minHeight="60dp"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/grey_10"
+                        android:textColorHint="@color/grey_10"
+                        android:textSize="18sp" />
+
+                    <!-- <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="20dp"
+                         android:fontFamily="@font/manrope_medium"
+                         android:text="@string/overall_no_of_slots"
+                         android:textColor="@color/grey_text"
+                         android:textSize="16sp" />
+
+                     <EditText
+                         android:id="@+id/slotsEt"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginVertical="10dp"
+                         android:background="@drawable/edit_profile_edit_text_bg"
+                         android:fontFamily="@font/manrope_medium"
+                         android:hint="@string/_31"
+                         android:inputType="number"
+                         android:minHeight="60dp"
+                         android:paddingHorizontal="20dp"
+                         android:singleLine="true"
+                         android:textColor="@color/grey_10"
+                         android:textColorHint="@color/grey_10"
+                         android:textSize="18sp" />-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/aadhar_passport_front_image_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/aadhar_passport_front_image"
+                            android:textColor="@color/grey_text"
+                            android:textSize="16sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_pick_btn"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/image_pick_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_add"
+                            app:layout_constraintBottom_toBottomOf="@id/textTV"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/textTV" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/setIMG"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintRight_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/image_pick_btn" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/aadhar_passport_back_image_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textTV2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:text="@string/aadhar_passport_back_image"
+                            android:textColor="@color/grey_text"
+                            android:textSize="16sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/doc_pick_btn"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/doc_pick_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_add"
+                            app:layout_constraintBottom_toBottomOf="@id/textTV2"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/textTV2" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/setDOC"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintRight_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/doc_pick_btn" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/save_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@drawable/round_background_gradient"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

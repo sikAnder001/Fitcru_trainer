@@ -1,0 +1,411 @@
+<resources>
+    <string name="app_name">Fitcru-Coach</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appointment">Appointment</string>
+    <string name="plans">Plans</string>
+    <string name="habit">Habits</string>
+    <string name="chat">Chat</string>
+    <string name="p">P</string>
+    <string name="upcoming_appointment">Upcoming Appointment</string>
+    <string name="prateek_kumar">Prateek Kumar</string>
+    <string name="date">Date</string>
+    <string name="app_time">App. Time</string>
+    <string name="_12_dec_2022">12 Dec 2022</string>
+    <string name="_5_00_am">5.00 AM</string>
+    <string name="_1">1</string>
+    <string name="add_new_appointment">Add New Appointment</string>
+    <string name="add_appointment">Add Appointment</string>
+    <string name="save">Save</string>
+    <string name="name_of_client">Name Of Client</string>
+    <string name="add_name">Add Name</string>
+    <string name="add_date">Add Date</string>
+    <string name="add_time">Add Time</string>
+    <string name="_12_00">12:00</string>
+    <string name="add_note">Add Note</string>
+    <string name="enter_your_note">Enter Your Note</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time_for_appointment">Select Time For Appointment</string>
+    <string name="select_time">Select Time</string>
+    <string name="schedule_availability">Mark Unavailability</string>
+    <string name="schedule_availability1">Mark Availability</string>
+    <string name="month">Month</string>
+    <string name="october">October</string>
+    <string name="mon">MON</string>
+    <string name="tue">TUE</string>
+    <string name="wed">WED</string>
+    <string name="thu">THU</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="sun">SUN</string>
+    <string name="select_working_hours">Select working hours</string>
+    <string name="end_time">End Time</string>
+    <string name="lunch">Lunch</string>
+    <string name="tea_break">Tea Break</string>
+    <string name="start_time">Start Time</string>
+    <string name="save_availability">Save Unavailability</string>
+    <string name="join">Join</string>
+    <string name="expire">Expire</string>
+    <string name="edit_plan">Edit Plan</string>
+    <string name="workout">Workout</string>
+    <string name="workout1">Workout (kcal)</string>
+    <string name="diet">Diet</string>
+    <string name="_1000_2500">1000/2500</string>
+    <string name="kcal_burnt">Kcal burnt</string>
+    <string name="water">Water (Ltrs)</string>
+    <string name="_3_5">3/5</string>
+    <string name="liters">liters</string>
+    <string name="steps">Steps</string>
+    <string name="_2000_10000">0/0</string>
+    <string name="pending">Pending</string>
+    <string name="cardio_workout">Cardio Workout</string>
+    <string name="paul_grand">Paul Grand</string>
+    <string name="_1hr">1hr</string>
+    <string name="edit">Edit</string>
+    <string name="select_workout">Select Workout</string>
+    <string name="full_body">Full Body</string>
+    <string name="_200_sessions">200 + Sessions</string>
+    <string name="select_meal">Select Meal</string>
+    <string name="peanut_butter_toast">Peanut Butter Toast</string>
+    <string name="selected">Selected</string>
+    <string name="select_clients">Select Clients</string>
+    <string name="home_workout">Home Workout</string>
+    <string name="_185_sessions">185 Sessions</string>
+    <string name="_1_hr_30_min">1 Hr 30 Min</string>
+    <string name="s_amp_c_lower_body"><![CDATA[S&C Lower Body]]></string>
+    <string name="intermediate">Intermediate</string>
+    <string name="select">Select</string>
+    <string name="okay_will_you_join">Okay, will you join?</string>
+    <string name="_12">12</string>
+    <string name="my_certifications">My Certifications</string>
+    <string name="help_support">Help support</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="logout">Logout</string>
+    <string name="deactivate">Deactivate Account</string>
+    <string name="first_name">First Name</string>
+    <string name="first_name1">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="_91">91</string>
+    <string name="_8536954288">8536954288</string>
+    <string name="email">Email</string>
+    <string name="prashant_gmail_com">prashant@gmail.com</string>
+    <string name="gender">Gender</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="_17_08_1985">17 / 08 / 1985</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="update">Update</string>
+    <string name="issuing_organization">Issuing organization</string>
+    <string name="ex_ncsf">Ex: NCSF</string>
+    <string name="name_of_certificate">Name Of Certificate</string>
+    <string name="name">Name</string>
+    <string name="certificates">Certificates</string>
+    <string name="certified_ncsf">Certified NCSF</string>
+    <string name="my_clients">My Clients</string>
+    <string name="end_date">End Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="_15_days_left">15 Days Left</string>
+    <string name="clients">Clients</string>
+    <string name="programs">Programs</string>
+    <string name="status">Status</string>
+    <string name="complete">Complete</string>
+    <string name="edit_goals">Edit Goals</string>
+    <string name="short_goals">Short Goals</string>
+    <string name="short_goals1">Short Goal</string>
+    <string name="long_goals">Long Goals</string>
+    <string name="carbs">Carbs</string>
+    <string name="_200_g">200 %</string>
+    <string name="proteins">Proteins</string>
+    <string name="fats">Fats</string>
+    <string name="_500_kcal">500 Kcal</string>
+    <string name="text_goal">Create Custom Text Goal</string>
+    <string name="_5_ltrs">5 Ltrs</string>
+    <string name="_20000">20000</string>
+    <string name="_2">2</string>
+    <string name="_3_months">3 Months</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="goal">Goal</string>
+    <string name="leftpercent">35 % left</string>
+    <string name="weight">Weight</string>
+    <string name="weighvalue">64.6 Kgs</string>
+    <string name="waist">Waist</string>
+    <string name="waistvalue">32 Inch</string>
+    <string name="body_fat">Body Fat %</string>
+    <string name="fat_value">21 %</string>
+    <string name="location">Location</string>
+    <string name="login">Log In</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_">Login</string>
+    <string name="continue_">Continue</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="pincode">Pincode</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_state">Select State</string>
+    <string name="select_city">Select City</string>
+    <string name="enter_pincode">Enter Pincode</string>
+    <string name="by_continuing_forward_you_agree_to_fitcru_s_privacy_policy_and_terms_and_condition"><font color='#666666'>By continuing  forward, you agree to Fitcru\'s</font> \n<font color='#FFFFFF'>Privacy Policy</font> <font color='#666666'>and</font> <font color='#FFFFFF'> Terms and Condition</font></string>
+    <string name="enter_email_id">Enter Email Id</string>
+    <string name="enter_the_email_address_associated_with_your_account">Enter the email address associated with your account.</string>
+    <string name="bio_data">Bio Data</string>
+    <string name="biodata">Biodata</string>
+    <string name="aadhar_card_passport_no">Aadhaar Card/Passport No</string>
+    <string name="enter_aadhar_card_passport_no">Enter Aadhaar or Passport No</string>
+    <string name="coach_instagram_link">Coach Instagram Link</string>
+    <string name="link">Link</string>
+    <string name="overall_no_of_slots">Overall No. Of Slots</string>
+    <string name="_3">3</string>
+    <string name="_31">0</string>
+    <string name="aadhar_passport_front_image">Aadhaar Card/Passport Front Image</string>
+    <string name="aadhar_passport_back_image">Aadhaar Card/Passport Back Image</string>
+    <string name="select_language">Select Language</string>
+    <string name="language">Language</string>
+    <string name="specialization">Specialization</string>
+    <string name="select_specialization">Select Specialization</string>
+    <string name="select_gym_association">Select Gym Association</string>
+    <string name="gym_association">Gym Association</string>
+    <string name="qualification">Qualification</string>
+    <string name="update_password">Update Password</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string name="enter_old_password">Enter Old Password</string>
+    <string name="create_new_password">Create New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="mark_unavailable_for_today">Mark Unavailable</string>
+    <string name="select_month_day">Select Month/Day</string>
+    <string name="description">Description</string>
+    <string name="issue_organization">Issuing Organizations</string>
+    <string name="mealtypebreakfast">BreakFast</string>
+    <string name="mealbenefit">Benefit</string>
+    <string name="choose_any_one_goal">Choose any one goal and date</string>
+    <string name="target_date">Target Date</string>
+    <string name="target_value">Target Value</string>
+    <string name="where_are_you_based_out_of_city_and_country">Where are you based out of? City and country?</string>
+    <string name="married_or_single">Married or Single ?\n(Knowing if your client is married or single will help you understand the level of responsibility shared with your client and the way food is made at home)</string>
+    <string name="what_is_your_daily_routine_like_from_the_time_you_wake_up_till_the_time_you_sleep">What is your daily routine like, from the time you wake up till the time you sleep?</string>
+    <string name="do_you_want_me_to_edit_the_meal_timings_as_you_have_mentioned">Do you want me to edit the meal timings as you have mentioned?</string>
+    <string name="note">Notes</string>
+    <string name="note1">Note</string>
+    <string name="notes">Notes</string>
+    <string name="stage_of_the_client">Stage of the client</string>
+    <string name="workout_program">Workout Program</string>
+    <string name="short_goal_set_time_duration">Short Goal - set time duration</string>
+    <string name="long_goal_set_time_duration">Long Goal - set time duration</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="nutritional_daily_goals">Nutritional Daily goals</string>
+    <string name="calories">Calories</string>
+    <string name="please_enter_certificate_name">Please Enter Certificate Name</string>
+    <string name="please_enter_description">Please Enter Certificate Description</string>
+    <string-array name="workout">
+        <item>Weight</item>
+        <item>Body fat percentage</item>
+        <item>Metabolic score</item>
+        <item>Waist measurement</item>
+        <item>Hip measurement</item>
+        <item>Chest measurement</item>
+        <item>Arms measurement</item>
+    </string-array>
+    <string name="what_is_the_reason_that_you_want_to_sign_up_for_1_1_coaching">What is the reason that you want to sign up for 1-1 coaching?</string>
+    <string name="as_a_part_of_our_coaching_process_we_really_believe_in_finding_out_the_true_reason_for_a_change_please_be_honest_with_us_we_will_not_share_this_with_anyone_but_help_you_stay_motivated_to_this_reason">As a part of our coaching process, we really believe in finding out the true reason for a change. Please be honest with us. We will not share this with anyone, but help you stay motivated to this reason.</string>
+    <string name="to_calculate_an_approximate_body_fat_percentage_we_require_your" translatable="false">To calculate an approximate body fat percentage we require your</string>
+    <string name="do_you_have_any_medical_conditions" translatable="false">Do you have any medical conditions ?</string>
+    <string name="what_are_your_dietary_allergies" translatable="false">What are your dietary allergies?</string>
+    <string name="what_are_your_preferered_cuisines_10_it_is_important_to_have_food_that_you_prefer_throughout_this_journey_so_that_you_can_always_see_continuous_progress">What are your preferered cuisines ?\n(It is important to have food that you prefer throughout this journey so that you can always see continuous progress.</string>
+    <string name="what_is_your_preferred_style_of_nutrition">What is your preferred style of nutrition?</string>
+    <string name="how_many_meals_do_you_consume_amp_at_approx_what_time"><![CDATA[How many meals do you consume & at approx what time ?]]></string>
+    <string name="what_is_the_macronutrient_split_you_would_like_try_out_10_we_can_always_change_it_our_coaches_will_also_recommend_the_same_on_the_consult_call">What is the macronutrient split you would like try out?\n(We can always change it, our coaches will also recommend the same on the consult call)</string>
+    <string name="do_you_take_any_medications_or_supplementations">Do you take any medications or supplementations?</string>
+    <string name="_0">0 %</string>
+    <string name="proceed">Proceed</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="otp_verify">OTP Verify</string>
+    <string name="_7584253545">7584253545</string>
+    <string name="enter_the_6_digit_otp_sent_to_nto_proceed">Enter OTP sent to</string>
+    <string name="_000000">000000</string>
+    <string name="to_proceed">to proceed</string>
+    <string name="create_password">Create Password</string>
+    <string name="keep_it_safe">Will keep it safe.</string>
+    <string name="forget_password">Forgot password</string>
+    <string name="enter_email_id_associated_with_account">Enter the Email ID associated with your account.</string>
+    <string name="retype_pass">Re-type Password</string>
+    <string name="type_password">Type Password</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_email_id_1">Enter Email Id</string>
+    <string name="select_dob">Select DOB</string>
+    <string name="cancel">Cancel</string>
+    <string name="overall_calories_kcal">Overall Calories (kcal)</string>
+    <string name="water1">Water</string>
+    <string name="whatsapp_mobile_no">+919920322333</string>
+
+
+    <string name="sender_id" translatable="false">537683156161</string>
+    <string name="new_connection">new connection</string>
+    <string name="opponent_pending">Pending</string>
+    <string name="text_status_connect">Connect…</string>
+    <string name="text_status_checking">Checking…</string>
+    <string name="text_status_connected">Connected</string>
+    <string name="text_status_disconnected">Disconnected</string>
+    <string name="opponent_closed">Closed</string>
+    <string name="text_status_no_answer">No answer</string>
+    <string name="text_status_rejected">Rejected</string>
+    <string name="text_status_hang_up">Hung up</string>
+
+    <string name="error_login">Use your email or alphanumeric characters in a range from 3 to 50. First character must be a letter.</string>
+    <string name="error_display_name">Use alphanumeric characters and spaces in a range from 3 to 20. Cannot contain more than one space in a row.</string>
+
+    <string name="splash_app_version">v %s</string>
+    <string name="hint_user_display_name">Display name</string>
+
+    <string name="title_login_activity">Enter to chat</string>
+
+    <string name="text_welcoming_message">Please enter username and chat room name. \nYou can join existed chat room.</string>
+    <string name="hint_login">Login</string>
+
+    <string name="text_select_dialog_to_join">Select dialog you want to join</string>
+
+    <string name="loading_users_error">Loading users error. Error</string>
+    <string name="removeDataError">Logout error</string>
+    <string name="dialogs_deletion_error">Dialog deletion errors</string>
+
+    <!--Permissions Screen-->
+    <string name="permission_unavailable">%s is not available now!</string>
+
+    <!--Select Users Screen-->
+    <string name="text_select_users_to_call">Select users you want to call</string>
+    <string name="title_one_user_selected">%s user selected</string>
+    <string name="tile_many_users_selected">%s users selected</string>
+    <string name="menu_refresh_users">Refresh</string>
+    <string name="menu_select_people_done">Done</string>
+    <string name="placeholder_username_you">%s (you)</string>
+    <string name="select_users_choose_users">Please, choose at least one participant</string>
+
+    <string name="text_push_notification_message">"%s is calling you"</string>
+    <string name="push_notification_message">Coach is calling you</string>
+
+    <!--Call Screen-->
+    <string name="in_conference">In Conference</string>
+    <string name="text_local_name">Me</string>
+    <string name="camera_swicth_failed">\"Failed switch camera\"</string>
+    <string name="opponents">and %s other</string>
+    <string name="text_status_closed">Closed</string>
+
+    <!--action bar-->
+    <string name="subtitle_text_logged_in_as">Logged in as %s</string>
+    <string name="actionbar_title_settings">Settings</string>
+
+    <!-- Dialogs strings. -->
+    <string name="dlg_creating_new_user">Creating new user…</string>
+    <string name="dlg_loading_dialogs_users">Loading dialogs and users…</string>
+    <string name="dlg_retry">Retry</string>
+    <string name="dlg_updating_dialog">Updating dialog…</string>
+    <string name="dlg_create_dialog">Creating dialog…</string>
+    <string name="dlg_loading_opponents">Loading opponents…</string>
+    <string name="dlg_signal_error">Disconnected… Please check your Internet connection!</string>
+    <string name="dlg_login_error">The user does not logged</string>
+    <string name="dlg_allow">Allow</string>
+
+    <string name="login_chat_login_error">Login Chat error. Please relogin. Error</string>
+    <string name="login_chat_retry">Connecting... Please wait a moment</string>
+
+    <!--menu-->
+    <string name="action_start_login">Done</string>
+    <string name="action_leave_dialog">Leave Dialog</string>
+    <string name="action_start_video_call">Video call</string>
+    <string name="action_start_audio_call">Audio call</string>
+    <string name="action_start_broadcast_call">Join to broadcast</string>
+    <string name="action_update_opponens_list">Update opponents list</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_screen_share">Screen share</string>
+    <string name="action_dialogs_app_info">App Info</string>
+
+    <!--Incoming Call-->
+    <string name="text_incoming_audio_call">Incoming Audio Call</string>
+    <string name="text_incoming_video_call">Incoming Video Call</string>
+
+    <!--action bar-->
+    <string name="title_one_dialog_selected">%s dialog selected</string>
+    <string name="tile_many_dialogs_selected">%s dialogs selected</string>
+
+    <!--Call-->
+    <string name="also_on_call">Also on call:</string>
+    <string name="user_list_on_call">User 1, User 2, User 3, User 4, User 5, User 6</string>
+    <string name="connection_was_lost">Connection was lost</string>
+    <string name="opponent">and %s </string>
+    <string name="accepted">Accepted</string>
+    <string name="stop_share">Stop</string>
+    <string name="you">You</string>
+
+    <!-- App info -->
+    <string name="appinfo_application_version">Application version:</string>
+    <string name="appinfo_qbsdk_version">QuickBlox SDK version:</string>
+    <string name="appinfo_application_id">Application ID:</string>
+    <string name="appinfo_authorization_key">Authorization key:</string>
+    <string name="appinfo_authorization_secret">Authorization secret:</string>
+    <string name="appinfo_account_key">Account key:</string>
+    <string name="appinfo_api_domain">API domain:</string>
+    <string name="appinfo_chat_domain">Chat domain:</string>
+    <string name="appinfo_title">App Info</string>
+    <string name="appinfo_qa_verion">QA version:</string>
+
+    <!--Notification-->
+    <string name="notification_title">You have an active call</string>
+    <string name="notification_text">Touch takes you back to the call %1$s</string>
+
+    <!-- Errors strings. -->
+    <string name="error_qb_credentials_empty">Credentials are wrong or empty. You have to set:
+        Application ID, Authentification Key, Authentification Secret, Account Key in constants in App.java
+        and you have to set Sender ID in the string resources to launch application.
+        If you haven\'t them you can register new account and application at https://admin.quickblox.com
+        then put Application credentials from Overview page + Account key from https://admin.quickblox.com/account/settings</string>
+    <string name="sign_up_error">Error creating new user, please try again</string>
+    <string name="sign_in_error">Error SignIn user, please try again</string>
+    <string name="update_user_error">Error updating User, please try again</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="dlg_error">Error</string>
+    <string name="dlg_error_loading">Loading dialog error. Error</string>
+    <string name="dialogs_creation_error">Dialog creation errors</string>
+    <string name="join_conference">Join to conference…</string>
+    <string name="join_conference_error">Join to conference errors</string>
+    <string name="error_connection">Connection failed. Please check your internet connection.</string>
+    <string name="error_response_timeout">No response received within reply timeout</string>
+    <string name="error_max_opponents_count">You can select up to %d opponents</string>
+    <string name="error_permission_video">You should allow Camera permission</string>
+    <string name="error_permission_audio">You should allow Microphone permission</string>
+    <string name="error_get_permission">Error getting permissions</string>
+    <string name="versionNam" translatable="false">QuickBlox Video Chat Kotlin
+Build version 4.1.0</string>
+
+    <string-array name="shortgoal" translatable="false">
+        <item>Please select a value</item>
+        <item>Weight</item>
+        <item>Body fat percentage</item>
+        <item>Metabolic score</item>
+        <item>Waist measurement</item>
+        <item>Hip measurement</item>
+        <item>Chest measurement</item>
+        <item>Arms measurement</item>
+        <item>Create custom text goal</item>
+    </string-array>
+
+    <string-array name="longgoal" translatable="false">
+        <item>Please select a value</item>
+        <item>Weight</item>
+        <item>Body fat percentage</item>
+        <item>Metabolic score</item>
+        <item>Waist measurement</item>
+        <item>Hip measurement</item>
+        <item>Chest measurement</item>
+        <item>Arms measurement</item>
+        <item>Create custom text goal</item>
+    </string-array>
+
+
+</resources>

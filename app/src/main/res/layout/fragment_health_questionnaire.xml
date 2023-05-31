@@ -1,0 +1,1520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        android:orientation="vertical"
+        tools:context=".fragment.HealthQuestionnaireFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/what_is_the_reason_that_you_want_to_sign_up_for_1_1_coaching"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ11"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ11"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ11">
+
+                        <CheckBox
+                            android:id="@+id/cb_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Fat loss"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Muscle gain"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Targeted growth plan"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Contest prep"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="More attention"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/as_a_part_of_our_coaching_process_we_really_believe_in_finding_out_the_true_reason_for_a_change_please_be_honest_with_us_we_will_not_share_this_with_anyone_but_help_you_stay_motivated_to_this_reason"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/round_stroke3"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ22"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ22"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ22">
+
+                        <EditText
+                            android:id="@+id/et_22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:hint="Enter your answer..."
+                            android:minLines="3"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_20"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <TextView
+                    android:id="@+id/tvQ30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/grey_text"
+                    android:fontFamily="@font/manrope_bold"
+                    android:padding="5dp"
+                    android:text="@string/to_calculate_an_approximate_body_fat_percentage_we_require_your"
+                    android:textColor="@color/grey_text"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvQ2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/llQ30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvQ4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ44"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Whats your waist size?"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:background="@drawable/round_stroke3"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ44"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ44"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ44">
+
+                            <EditText
+                                android:id="@+id/et_44"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:fontFamily="@font/manrope_regular"
+                                android:hint="Enter your answer in Inches"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/grey_20"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvQ5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ55"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="What is your neck size?"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ5"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:background="@drawable/round_stroke3"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ55"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ55"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ55">
+
+                            <EditText
+                                android:id="@+id/et_55"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:fontFamily="@font/manrope_regular"
+                                android:hint="Enter your answer in Inches"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/grey_20"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvQ6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ66"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="What is your hip size ?"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ6"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:background="@drawable/round_stroke3"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ66"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ66"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ66">
+
+                            <EditText
+                                android:id="@+id/et_66"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:fontFamily="@font/manrope_regular"
+                                android:hint="Enter your answer in Inches"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/grey_20"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvQ3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="Q. "
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvQ33"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:padding="5dp"
+                            android:text="What is your Goal body weight?"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvQ3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:background="@drawable/round_stroke3"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvQ33"
+                            app:layout_constraintStart_toStartOf="@+id/tvQ33"
+                            app:layout_constraintTop_toBottomOf="@+id/tvQ33">
+
+                            <EditText
+                                android:id="@+id/et_33"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:fontFamily="@font/manrope_regular"
+                                android:hint="Enter your answer in Kg."
+                                android:inputType="numberDecimal"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/grey_20"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ77"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/do_you_have_any_medical_conditions"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ7"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ77"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ77"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ77"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ77"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <CheckBox
+                            android:id="@+id/cb_71"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="PCOS"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_72"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Thyroid"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_73"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Diabetes"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_74"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Hyperthyroidism"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_75"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Heart issues"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_76"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Autoimune"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_77"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Surgeries"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cbInjuries"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Injuries"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etInjuries"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_stroke3"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:hint="Enter about your answer..."
+                            android:minLines="2"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_20"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+                        <CheckBox
+                            android:id="@+id/cbOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Other"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etOther"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_stroke3"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:hint="Enter about your answer..."
+                            android:minLines="2"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_20"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ88"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/what_are_your_dietary_allergies"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ8"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ88"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ88"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ88"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ88">
+
+                        <CheckBox
+                            android:id="@+id/cb_81"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Sea food"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_82"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Gluten"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_83"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Lactose"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_84"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Nut allergy"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_85"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Shell fish"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cbOther2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Other"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/etOther2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_stroke3"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:hint="Enter about your answer..."
+                            android:minLines="2"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_20"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ99"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/what_are_your_preferered_cuisines_10_it_is_important_to_have_food_that_you_prefer_throughout_this_journey_so_that_you_can_always_see_continuous_progress"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ9"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ99"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ99"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ99"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ99">
+
+                        <CheckBox
+                            android:id="@+id/cb_91"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Chinese ( Indian street style Chinese like gravies and rice, noodles)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_92"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Indian (North Indian and typical Indian foods like daal , roti and subzi)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_93"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="South Indian"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_94"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Italian (pizzas and pastas)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_95"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Continental (variety of grilled steaks and with sauces and other things)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_96"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Mexican (burritos, tacos and bean bowls)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_97"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="American (burgers and street food)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ1010"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/what_is_your_preferred_style_of_nutrition"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ1010"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ1010"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ1010"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ1010">
+
+                        <CheckBox
+                            android:id="@+id/cb_1010"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Intermittent fasting"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_1011"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="4-6 meals a day"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_1012"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Ketogenic"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_1013"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Carnivore (meat based)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_1014"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="mediterianin (more veggies)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ1212"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/what_is_the_macronutrient_split_you_would_like_try_out_10_we_can_always_change_it_our_coaches_will_also_recommend_the_same_on_the_consult_call"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ12"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ1212"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ1212"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ1212"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ1212">
+
+                        <CheckBox
+                            android:id="@+id/cb_12_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Low carb (20% carb, 40% protein, 40% Fat)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_12_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Low fat (30% carb, 50% Protein, 20% Fat)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cb_12_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/white"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="Balanced (40% carb, 30% Protein, 30% Fat)"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQ13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ1313"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="@string/how_many_meals_do_you_consume_amp_at_approx_what_time"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ13"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ1313"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ1313"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ1313"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ1313">
+
+                        <EditText
+                            android:id="@+id/etBreakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/round_stroke3"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:gravity="start|top"
+                            android:hint="Enter the total no. of consumed meals &amp; its time"
+                            android:minLines="5"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_20"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <TextView
+                    android:id="@+id/tvQ13130"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/grey_text"
+                    android:fontFamily="@font/manrope_bold"
+                    android:padding="5dp"
+                    android:text="Please add your before pictures&#10;(Progress pictures is the best way to assess progress and also keep a check on yourself, attaching a reference image here)"
+                    android:textColor="@color/grey_text"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvQ2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/llQ13130"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/items_container1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ivImage1"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:enabled="false"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/upload_img" />
+
+                                <TextView
+                                    android:id="@+id/tvAddImage1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="70dp"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="Add Image"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:visibility="gone" />
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/ivRemove1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/circulor_button"
+                            android:backgroundTint="#F00"
+                            android:enabled="false"
+                            android:src="@drawable/ic_remove_circle"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@id/items_container1"
+                            app:layout_constraintEnd_toEndOf="@+id/items_container1"
+                            app:layout_constraintStart_toEndOf="@id/items_container1"
+                            app:layout_constraintTop_toTopOf="@id/items_container1"
+                            app:tint="@color/white" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/items_container2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ivImage2"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:enabled="false"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/upload_img" />
+
+                                <TextView
+                                    android:id="@+id/tvAddImage2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="70dp"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="Add Image"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:visibility="gone" />
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/ivRemove2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/circulor_button"
+                            android:backgroundTint="#F00"
+                            android:enabled="false"
+                            android:src="@drawable/ic_remove_circle"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@id/items_container2"
+                            app:layout_constraintEnd_toEndOf="@+id/items_container2"
+                            app:layout_constraintStart_toEndOf="@id/items_container2"
+                            app:layout_constraintTop_toTopOf="@id/items_container2"
+                            app:tint="@color/white" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/items_container3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ivImage3"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:enabled="false"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/upload_img" />
+
+                                <TextView
+                                    android:id="@+id/tvAddImage3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="70dp"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="Add Image"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp"
+                                    android:visibility="gone" />
+                            </androidx.cardview.widget.CardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/ivRemove3"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/circulor_button"
+                            android:backgroundTint="#F00"
+                            android:enabled="false"
+                            android:src="@drawable/ic_remove_circle"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@id/items_container3"
+                            app:layout_constraintEnd_toEndOf="@+id/items_container3"
+                            app:layout_constraintStart_toEndOf="@id/items_container3"
+                            app:layout_constraintTop_toTopOf="@id/items_container3"
+                            app:tint="@color/white" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/grey_20" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvQ14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Q. "
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvQ1414"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/grey_text"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="5dp"
+                        android:text="Do you have any comments for your coach ?"
+                        android:textColor="@color/grey_text"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvQ14"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llQ1414"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvQ1414"
+                        app:layout_constraintStart_toStartOf="@+id/tvQ1414"
+                        app:layout_constraintTop_toBottomOf="@+id/tvQ1414">
+
+                        <EditText
+                            android:id="@+id/etComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_stroke3"
+                            android:enabled="false"
+                            android:fontFamily="@font/manrope_regular"
+                            android:hint="Enter your Comment for Coach"
+                            android:minLines="3"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_20"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/llFooter"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/overlay_light_30" />
+
+            <TextView
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/round_background_gradient"
+                android:fontFamily="@font/satoshi_bold"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

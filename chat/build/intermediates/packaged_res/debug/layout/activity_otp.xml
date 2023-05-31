@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_95"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".ui.activities.otp.OtpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/otp_verify" />
+
+            <TextView
+                android:id="@+id/tvVerifyOtpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/manrope_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="Verify +919876543210" />
+
+            <TextView
+                android:id="@+id/tvVerifyOtpDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/enter_the_otp_code_to_verify_your_phone_number"
+                android:textColor="@color/grey_20"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <com.mukesh.OtpView
+                    android:id="@+id/otpView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    android:itemBackground="@color/grey_10"
+                    android:textColor="@color/black"
+                    app:OtpItemCount="6"
+                    app:OtpLineColor="@color/green_400"
+                    app:OtpViewType="line"
+                    tools:text="123456" />
+
+                <TextView android:id="@+id/tvResend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="Resend OTP"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_background_gradient"
+                    android:fontFamily="@font/satoshi_bold"
+                    android:gravity="center"
+                    android:text="Continue"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

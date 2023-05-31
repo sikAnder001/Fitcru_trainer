@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        tools:context=".fragments.HomeWorkoutFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back_btn_circular_background"
+                android:gravity="center"
+                android:src="@drawable/back_icon" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/filter_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/back_btn_circular_background"
+                    android:padding="5dp"
+                    android:src="@drawable/filter_icon_new"
+                    app:tint="@color/one" />
+
+                <ImageView
+                    android:id="@+id/notification_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/back_btn_circular_background"
+                    android:padding="5dp"
+                    android:src="@drawable/notification" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_container">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/item_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/home_workout_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosans_semibold"
+                    android:padding="2dp"
+                    android:text="@string/home_workout"
+                    android:textColor="@color/grey_10"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/workout_total_sessions_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosans_regular"
+                    android:padding="2dp"
+                    android:text="@string/_185_sessions"
+                    android:textColor="@color/grey_60" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_workout_main_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="30dp"
+                    android:overScrollMode="never" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
